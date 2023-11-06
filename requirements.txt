@@ -1,0 +1,10 @@
+langchain
+together
+openai
+streamlit
+faiss-cpu
+sentence-transformers
+torch
+transformers
+rank-bm25
+streamlit-chat 
