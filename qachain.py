@@ -31,6 +31,7 @@ class FinBotCreator:
                                 chain_type=self.chain_type,
                                 retriever= retriever,
                                 return_source_documents=True,
+                                verbose = True,
                                 chain_type_kwargs={"prompt": custom_prompt}
                             )
         return retrieval_qa_chain

@@ -6,11 +6,16 @@ from langchain.llms.base import LLM
 from langchain.utils import get_from_dict_or_env
 import os
 import logging
-
-os.environ["TOGETHER_API_KEY"] = "ab4b032cd281abfa843ab00815c7c4120594a7bac92fdd97894f5a0c03a80e6b"
-together.api_key = os.environ["TOGETHER_API_KEY"]
+from langchain.chat_models import ChatOpenAI
 
 
+
+#os.environ["TOGETHER_API_KEY"] = "ab4b032cd281abfa843ab00815c7c4120594a7bac92fdd97894f5a0c03a80e6b"
+#together.api_key = os.environ["TOGETHER_API_KEY"]
+
+os.environ["OPENAI_API_KEY"] = "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"
+
+'''
 class TogetherLLM(LLM):
     """Together large language models."""
 
@@ -45,11 +50,14 @@ class TogetherLLM(LLM):
                                           temperature=self.temperature)
         text = output['output']['choices'][0]['text']
         return text
-    
-def load_llm(model,temp,max_tokens):
-    llm = TogetherLLM(
+'''
+def load_llm():
+    '''llm = TogetherLLM(
         model=model,
         temperature=temp,
         max_tokens=max_tokens
+    )'''
+    llm = ChatOpenAI(
+        temperature = 0.1
     )
     return llm

@@ -22,8 +22,8 @@ def display_conversation(history):
 
 def main():
 
-    st.title("Financial Advisor: A Financial Nerd 📚🤖")
-    st.subheader("A bot created using Langchain 🦜 to run on cpu making your financial management process easier")
+    st.title("Chat with your Invoice")
+    st.subheader("A bot created using Langchain 🦜 to run on cpu making your invoice management process easier")
 
     user_input = st.text_input("Enter your query")
 
