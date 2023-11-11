@@ -1,15 +1,9 @@
-import PyPDF2
-import sys
 from time import sleep
 import os
 from langchain.prompts import PromptTemplate
 from langchain.llms import OpenAI
 from langchain.chains import LLMChain
 from llm import load_llm
-from langchain.embeddings import HuggingFaceEmbeddings
-from langchain.vectorstores import FAISS
-from langchain.retrievers import BM25Retriever, EnsembleRetriever
-from langchain.document_loaders import PyPDFLoader, DirectoryLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from config import * 
 from langchain.document_loaders import PyPDFLoader
