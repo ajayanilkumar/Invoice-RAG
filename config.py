@@ -1,7 +1,7 @@
 DATA_DIR_PATH = "data/"
 FAISS_PATH = "vectorstore/faiss/"
-CHUNK_SIZE = 500
-CHUNK_OVERLAP = 200
+CHUNK_SIZE = 250
+CHUNK_OVERLAP = 50
 EMBEDDER = "BAAI/bge-base-en-v1.5"
 DEVICE = "mps"
 PROMPT_TEMPLATE = '''
@@ -20,5 +20,5 @@ CHAIN_TYPE = "stuff"
 SEARCH_KWARGS = {'k': 2}
 #MODEL_CKPT = "res/mistral-7b-openorca.Q8_0.gguf"
 #MODEL_TYPE = "llama"
-MAX_NEW_TOKENS = 50
+MAX_NEW_TOKENS = 100
 TEMPERATURE = 0.0

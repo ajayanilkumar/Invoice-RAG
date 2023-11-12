@@ -5,7 +5,7 @@ from config import *
 from ensemble import retriever_creation
 from llm import load_llm
 
-class FinBotCreator:
+class InvBotCreator:
 
     def __init__(self):
         self.prompt_temp = PROMPT_TEMPLATE
@@ -36,9 +36,9 @@ class FinBotCreator:
                             )
         return retrieval_qa_chain
     
-    def create_finbot(self):
+    def create_invbot(self):
         self.custom_prompt = self.create_custom_prompt()
         self.retriever = self.load_retriever()
-        self.llm = load_llm("togethercomputer/llama-2-70b-chat",self.temperature,self.max_new_tokens)
+        self.llm = load_llm()
         self.bot = self.create_bot(self.custom_prompt, self.retriever, self.llm)
         return self.bot

@@ -20,7 +20,7 @@ def retriever_creation():
     faiss_vectorstore = FAISS.load_local(FAISS_PATH, embeddings)
     faiss_retriever = faiss_vectorstore.as_retriever(search_kwargs=SEARCH_KWARGS)
     bm25_retriever = BM25Retriever.from_documents(texts)
-    ensemble_retriever = EnsembleRetriever(retrievers=[faiss_retriever, bm25_retriever], weights=[0.5, 0.5])
+    ensemble_retriever = EnsembleRetriever(retrievers=[faiss_retriever, bm25_retriever], weights=[0.8, 0.2])
     print("Vector Store Creation Completed")
     return ensemble_retriever
 

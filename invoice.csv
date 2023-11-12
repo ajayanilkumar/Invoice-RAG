@@ -1,2 +1,6 @@
-product_type,invoice_no,total_amount,date_purchased
-
+product_type,product_name,invoice_no,total_amount,date_purchased
+Furniture,"Iceberg Nesting Folding Chair, 19w x 6d x 43h",36651,"$1,353.08",May 12 2012
+Furniture,"Hon Swivel Stool, Black",17535,"$1,253.37",Jan 15 2013
+Fuel,Petrol,1921,₹ 1000,04 Nov 2023
+Phones,"Samsung Smart Phone, VoIP",6817,"$10,672.30",Oct 23 2012
+Office Supplies,"Fellowes Lockers, Blue",50041,"$13,421.28",Jul 17 2012
