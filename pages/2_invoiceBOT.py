@@ -24,6 +24,7 @@ def main():
 
     st.title("Chat with your Invoice")
     st.subheader("A bot created using Langchain 🦜 to make your invoice management process easier")
+    st.write("We have made used of advanced RAG techniques like ensemble retirver to chat with your invoice.")
 
     user_input = st.text_input("Enter your query")
 

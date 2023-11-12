@@ -13,7 +13,7 @@ from langchain.chat_models import ChatOpenAI
 #os.environ["TOGETHER_API_KEY"] = "ab4b032cd281abfa843ab00815c7c4120594a7bac92fdd97894f5a0c03a80e6b"
 #together.api_key = os.environ["TOGETHER_API_KEY"]
 
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = "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"
 
 '''
 class TogetherLLM(LLM):

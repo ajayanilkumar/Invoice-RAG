@@ -1,6 +1,6 @@
 DATA_DIR_PATH = "data/"
 FAISS_PATH = "vectorstore/faiss/"
-CHUNK_SIZE = 250
+CHUNK_SIZE = 200
 CHUNK_OVERLAP = 50
 EMBEDDER = "BAAI/bge-base-en-v1.5"
 DEVICE = "mps"

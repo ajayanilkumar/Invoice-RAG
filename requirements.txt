@@ -5,6 +5,10 @@ streamlit
 faiss-cpu
 sentence-transformers
 torch
+pypdf
 transformers
 rank-bm25
-streamlit-chat 
+streamlit-chat
+lida
+matplotlib
+seaborn

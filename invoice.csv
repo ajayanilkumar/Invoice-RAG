@@ -1,6 +1,7 @@
-product_type,product_name,invoice_no,total_amount,date_purchased
-Furniture,"Iceberg Nesting Folding Chair, 19w x 6d x 43h",36651,"$1,353.08",May 12 2012
-Furniture,"Hon Swivel Stool, Black",17535,"$1,253.37",Jan 15 2013
-Fuel,Petrol,1921,₹ 1000,04 Nov 2023
-Phones,"Samsung Smart Phone, VoIP",6817,"$10,672.30",Oct 23 2012
-Office Supplies,"Fellowes Lockers, Blue",50041,"$13,421.28",Jul 17 2012
+invoice_no,product_type,product_name,total_amount,date_purchased
+36651,Furniture,"Iceberg Nesting Folding Chair, 19w x 6d x 43h","$1,353.08",May 12 2012
+17535,Furniture,"Hon Swivel Stool, Black","$1,253.37",Jan 15 2013
+1921,Fuel,Petrol,₹ 1000,04 Nov
+6817,Phones,"Samsung Smart Phone, VoIP","$10,672.30",Oct 23 2012
+50041,Office Supplies,"Fellowes Lockers, Blue","$13,421.28",Jul 17 2012
+2019/12/17/BEN-1009/141,Food,"The Meat Eater Pizza - BIG (10"")",784.0,17-12-2019

@@ -1,4 +1,3 @@
-
 from time import sleep
 import os
 from langchain.prompts import PromptTemplate
@@ -11,31 +10,30 @@ from langchain.document_loaders import PyPDFLoader
 import json
 import csv
 
-csv_file_path = "/Users/anilrao/Desktop/RAG_PROJECTS/Invoice/invoice.csv"
-prompt_template = "Given the information about the products through this invoice. Can you give me the details of the invoice in the following JSON format? \
-                    Generalize the product_type. For example if the of product comes under : Storage, Office Supplies, product_type should be: Office Supplies. \
-                    Similarly if the product is: Chairs, Furniture, the product_type should be Furniture and so on. \
-                    Just give me JSON output only, dont give me additional keys other than the below mentioned. \
-                            product_type: \
-                            product_name: \
-                            invoice_no:  \
-                            total_amount: \
-                            date_purchased: \
-                            {invoice} "
+def create_csv():
+    csv_file_path = "/Users/anilrao/Desktop/RAG_PROJECTS/Invoice/invoice.csv"
+    prompt_template = "Given the information about the products through this invoice. Can you give me the details of the invoice in the following JSON format? \
+                        Generalize the product_type. For example if the of product comes under : Storage, Office Supplies, product_type should be: Office Supplies. \
+                        Similarly if the product is: Chairs, Furniture, the product_type should be Furniture. \
+                        Similarly if the products are pizzas, cakes etc, the product_type should be Food and so on.    \
+                        Just give me JSON output only, dont give me additional keys other than the below mentioned. \
+                                invoice_no:  \
+                                product_type: \
+                                product_name: \
+                                total_amount: \
+                                date_purchased: \
+                                {invoice} "
 
-llm = OpenAI(temperature=0)
-llm_chain = LLMChain(llm=load_llm(), prompt=PromptTemplate.from_template(prompt_template))
-keys_to_extract = ["product_type", "product_name", "invoice_no", "total_amount", "date_purchased"]
-
-if __name__ == '__main__':
-    directory = "/Users/anilrao/Desktop/RAG_PROJECTS/Invoice/data/"
+    llm = OpenAI(temperature=0)
+    llm_chain = LLMChain(llm=load_llm(), prompt=PromptTemplate.from_template(prompt_template))
+    keys_to_extract = ["invoice_no", "product_type", "product_name", "total_amount", "date_purchased"]
+    directory = "data/"
 
 
     for filename in os.listdir(directory):
         f = os.path.join(directory, filename)
         #print(txt)
         loader = PyPDFLoader(f)
-
         document = loader.load()
         text_splitter = RecursiveCharacterTextSplitter(chunk_size=CHUNK_SIZE,
                                                     chunk_overlap=CHUNK_OVERLAP)
@@ -46,4 +44,8 @@ if __name__ == '__main__':
             csv_writer = csv.writer(csv_file)
             csv_writer.writerow(extracted_data.values())
         sleep(3) # To avoid rate limit error
+
+
+
+
 
