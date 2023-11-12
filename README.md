@@ -25,5 +25,5 @@ streamlit run homepage.py
 
 While you are on the analytics page, make sure to use the invoice_cleaned.csv as the input file for generating LIDA infographics.
 
-The data folder consists of a few invoices. We wanted to add diversity to the dataset so we used different types of invoices to see of the LLM can process it.
+The data folder consists of a few invoices. We wanted to add diversity to the dataset so we used different types of invoices to see if the LLM can process it.
 The results folder consists of some output screenshots.
