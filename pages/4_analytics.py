@@ -6,7 +6,7 @@ import pandas as pd
 
 
 # make data dir if it doesn't exist
-os.makedirs("data", exist_ok=True)
+os.makedirs("dataset", exist_ok=True)
 
 
 st.header("LIDA: Automatic Generation of Visualizations and Infographics")
